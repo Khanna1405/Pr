@@ -1,5 +1,5 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-import sun.rmi.runtime.NewThreadAction;
+
+
 
 import java.util.Scanner;
 
@@ -7,39 +7,38 @@ public class main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int UserOption, input, UserInput,debit,credit;
+        int UserOption, input, UserInput, debit, credit;
         System.out.println("Choose 1 to continue and any other integer to exit:");
         input = sc.nextInt();
         sc.nextLine();
-        while (input == 1) {
+        do {
             System.out.println(" for new customer press 1 and for existing customer press 2");
             UserInput = sc.nextInt();
-            Customer CustInput= new Customer();
-            BankStatement CustInput3=new BankStatement();
+            BankTransaction CustInput = new BankTransaction();
+            BankStatement CustInput3 = new BankStatement();
 
 
-            if (UserInput==1){
+            if (UserInput == 1) {
                 System.out.println("Please Enter Customer Name:");
-                CustInput.name=sc.next();
+                CustInput.name = sc.next();
                 System.out.println("Please Enter registered mobile no. ");
-                CustInput.mobileNo=sc.next();
+                CustInput.mobileNo = sc.next();
                 System.out.println("Please Entered PAN number");
-                CustInput.PAN=sc.next();
+                CustInput.PAN = sc.next();
                 System.out.println(" please entered registered email id:");
-                CustInput.emailID=sc.next();
+                CustInput.emailID = sc.next();
                 System.out.println(" Please add your account type:");
-                CustInput.acctype=sc.next();
+                CustInput.acctype = sc.next();
                 System.out.println("Please add branch code:");
-                CustInput.Branch=sc.next();
+                CustInput.Branch = sc.next();
                 NewAccount.CustomerDetail();
 
 
-
             }
-            else if (UserInput==2){
+            else if (UserInput == 2) {
                 System.out.println(" Please enter an input, 1 for customer detail, 2 for transaction, 3 for account statement");
-                UserOption=sc.nextInt();
-                switch(UserOption){
+                UserOption = sc.nextInt();
+                switch (UserOption) {
                     case 1:
                         CustInput.displayExistingCustDetail();
                         break;
@@ -55,12 +54,13 @@ public class main {
                 }
 
 
-
             }
-            //System.out.println("Thanks for Coming");
 
-        }
 
+        }while (input == 1) ;
+        //System.out.println("Thanks for Coming");
 
     }
-}
+
+    }
+

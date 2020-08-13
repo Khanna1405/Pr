@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BankStatement extends Customer{
+public class BankStatement extends BankTransaction{
     void BankStatement() {
         System.out.println("Please enter 1 for debited amount statement and 2 for credited amt statement ");
         Scanner sc = new Scanner(System.in);
