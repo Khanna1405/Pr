@@ -9,6 +9,7 @@ public class BankTransaction extends NewAccount{
     Scanner sc=new Scanner(System.in);
 
     static void Transaction() {
+
         System.out.println("Please choose Transaction option: enter 1 for debit and 2 for Credit:");
         Scanner scanner = new Scanner(System.in);
         UserInput = scanner.nextInt();
