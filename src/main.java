@@ -14,8 +14,8 @@ public class main {
         do {
             System.out.println(" for new customer press 1 and for existing customer press 2");
             UserInput = sc.nextInt();
-            BankTransaction CustInput = new BankTransaction();
-            BankStatement CustInput3 = new BankStatement();
+
+            BankStatement CustInput = new BankStatement();
 
 
             if (UserInput == 1) {
@@ -43,17 +43,19 @@ public class main {
                         CustInput.displayExistingCustDetail();
                         break;
                     case 2:
-                        CustInput.Transaction();
+                        BankStatement.Transaction();
                         break;
                     case 3:
-                        CustInput3.BankStatement();
+                        BankStatement.BankStatement();
                         break;
                     default:
                         System.out.println("not a valid input");
                         break;
                 }
 
-
+            }
+            else{
+                System.out.println("Exit from the loop:");
             }
 
 
